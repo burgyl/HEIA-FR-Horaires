@@ -37,4 +37,13 @@
     <string name="warning_first_search">Da dies das erste Mal ist, dass Sie einen Raum finden wollen, muss die Anwendung alle Unterrichte aller Räume aus dem Internet abrufen, was bis zu 2 oder 3 Minuten dauern kann.</string>
     <string name="dialog_downloading_title">Das Update herunterladen …</string>
     <string name="dialog_update_title">Möchten Sie die Anwendung aktualisieren ?</string>
+    <string name="license_selfupdatingapp_description">von Lucas Bürgy, lizenziert unter der GNU GPL v3.0-Lizenz</string>
+    <string name="license_okio_description">von Square Open Source, lizenziert unter der Apache 2.0-Lizenz</string>
+    <string name="license_okhttp_description">von Square Open Source, lizenziert unter der Apache 2.0-Lizenz</string>
+    <string name="license_moshi_description">von Square Open Source, lizenziert unter der Apache 2.0-Lizenz</string>
+    <string name="license_jsoup_description">von Jonathan Hedley, lizenziert unter der MIT-Lizenz</string>
+    <string name="license_httpcomponents_description">von The Apache Software Foundation, lizenziert unter der Apache 2.0-Lizenz</string>
+    <string name="about_header">Über</string>
+    <string name="licenses_header">Lizenzen</string>
+    <string name="see_github_title">Siehe das Projekt auf GitHub</string>
 </resources>

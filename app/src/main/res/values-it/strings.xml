@@ -37,4 +37,13 @@
     <string name="warning_first_search">Poiché è la prima volta che si desidera trovare una stanza, l\'applicazione deve recuperare tutte le lezioni di tutte le stanze da Internet, che può richiedere fino a 2 o 3 minuti.</string>
     <string name="dialog_update_title">Vuole aggiornare l\'applicazione ?</string>
     <string name="dialog_downloading_title">Il download del aggiornamento …</string>
+    <string name="license_httpcomponents_description">di The Apache Software Foundation, con licenza Apache 2.0</string>
+    <string name="license_jsoup_description">di Jonathan Hedley, con licenza MIT</string>
+    <string name="license_moshi_description">di Square Open Source, con licenza Apache 2.0</string>
+    <string name="license_okhttp_description">di Square Open Source, con licenza Apache 2.0</string>
+    <string name="license_okio_description">di Square Open Source, con licenza Apache 2.0</string>
+    <string name="license_selfupdatingapp_description">di Lucas Bürgy, con licenza GNU GPL v3.0</string>
+    <string name="about_header">About</string>
+    <string name="licenses_header">Licenze</string>
+    <string name="see_github_title">Vedi il progetto su GitHub</string>
 </resources>

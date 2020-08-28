@@ -37,4 +37,13 @@
     <string name="warning_first_search">Etant donné que c\'est la première fois que vous voulez trouver une salle, l\'application doit obtenir tous les cours de toutes les salles à partir d\'Internet, ce qui peut prendre jusqu\'à 2 ou 3 minutes.</string>
     <string name="dialog_update_title">Voulez-vous mettre à jour l\'application ?</string>
     <string name="dialog_downloading_title">Téléchargement de la mise à jour …</string>
+    <string name="see_github_title">Voir le projet sur GitHub</string>
+    <string name="about_header">À propos</string>
+    <string name="licenses_header">Licenses</string>
+    <string name="license_selfupdatingapp_description">par Lucas Bürgy, sous license GNU GPL v3.0</string>
+    <string name="license_okio_description">par Square Open Source, sous license Apache 2.0</string>
+    <string name="license_okhttp_description">par Square Open Source, sous license Apache 2.0</string>
+    <string name="license_moshi_description">par Square Open Source, sous license Apache 2.0</string>
+    <string name="license_jsoup_description">par Jonathan Hedley, sous license MIT</string>
+    <string name="license_httpcomponents_description">par The Apache Software Foundation, sous license Apache 2.0</string>
 </resources>

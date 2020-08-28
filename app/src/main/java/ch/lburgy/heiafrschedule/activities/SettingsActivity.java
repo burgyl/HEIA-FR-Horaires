@@ -2,6 +2,7 @@ package ch.lburgy.heiafrschedule.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -166,6 +167,69 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
                     deleteDatas();
+                    return true;
+                }
+            });
+
+            findPreference(getString(R.string.settings_key_see_github)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/burgyl/HEIA-FR-Schedule"));
+                    startActivity(browserIntent);
+                    return true;
+                }
+            });
+
+            findPreference(getString(R.string.settings_key_license_httpcomponents)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://hc.apache.org/"));
+                    startActivity(browserIntent);
+                    return true;
+                }
+            });
+
+            findPreference(getString(R.string.settings_key_license_jsoup)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://jsoup.org/"));
+                    startActivity(browserIntent);
+                    return true;
+                }
+            });
+
+            findPreference(getString(R.string.settings_key_license_moshi)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/square/moshi"));
+                    startActivity(browserIntent);
+                    return true;
+                }
+            });
+
+            findPreference(getString(R.string.settings_key_license_okhttp)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/square/okhttp"));
+                    startActivity(browserIntent);
+                    return true;
+                }
+            });
+
+            findPreference(getString(R.string.settings_key_license_okio)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/square/okio"));
+                    startActivity(browserIntent);
+                    return true;
+                }
+            });
+
+            findPreference(getString(R.string.settings_key_license_selfupdatingapp)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                @Override
+                public boolean onPreferenceClick(Preference preference) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/burgyl/SelfUpdatingApp"));
+                    startActivity(browserIntent);
                     return true;
                 }
             });

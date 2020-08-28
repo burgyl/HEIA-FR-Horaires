@@ -44,12 +44,21 @@
     <string name="display_header">Display</string>
     <string name="infos_header">Informations</string>
     <string name="datas_header">Datas</string>
+    <string name="about_header">About</string>
+    <string name="licenses_header">Licenses</string>
 
     <!-- Settings keys -->
     <string name="settings_key_theme_9" translatable="false">theme_9</string>
     <string name="settings_key_theme_10" translatable="false">theme_10</string>
     <string name="settings_key_class" translatable="false">class</string>
     <string name="settings_key_delete_datas" translatable="false">delete_datas</string>
+    <string name="settings_key_see_github" translatable="false">github</string>
+    <string name="settings_key_license_httpcomponents" translatable="false">license_httpcomponents</string>
+    <string name="settings_key_license_jsoup" translatable="false">license_jsoup</string>
+    <string name="settings_key_license_moshi" translatable="false">license_moshi</string>
+    <string name="settings_key_license_okhttp" translatable="false">license_okhttp</string>
+    <string name="settings_key_license_okio" translatable="false">license_okio</string>
+    <string name="settings_key_license_selfupdatingapp" translatable="false">license_selfupdatingapp</string>
 
     <!-- Display Settings -->
     <string name="theme_title">Theme</string>
@@ -63,6 +72,23 @@
     <string name="delete_datas">Delete the local datas</string>
     <string name="datas_deleted">The local datas have been deleted</string>
     <string name="classes_refreshed">The class list has been refreshed</string>
+
+    <!-- About Settings -->
+    <string name="see_github_title">See the project on GitHub</string>
+
+    <!-- Licenses Settings -->
+    <string name="license_httpcomponents_title" translatable="false">Apache HttpComponents</string>
+    <string name="license_httpcomponents_description">by The Apache Software Foundation, licensed under the Apache 2.0 license</string>
+    <string name="license_jsoup_title" translatable="false">jsoup</string>
+    <string name="license_jsoup_description">by Jonathan Hedley, licensed under the MIT license</string>
+    <string name="license_moshi_title" translatable="false">Moshi</string>
+    <string name="license_moshi_description">by Square Open Source, licensed under the Apache 2.0 license</string>
+    <string name="license_okhttp_title" translatable="false">OkHttp</string>
+    <string name="license_okhttp_description">by Square Open Source, licensed under the Apache 2.0 license</string>
+    <string name="license_okio_title" translatable="false">Okio</string>
+    <string name="license_okio_description">by Square Open Source, licensed under the Apache 2.0 license</string>
+    <string name="license_selfupdatingapp_title" translatable="false">Self Updating App</string>
+    <string name="license_selfupdatingapp_description">by Lucas Bürgy, licensed under the GNU GPL v3.0 license</string>
 
     <!-- selfupdate  -->
     <string name="dialog_update_title">Do you want to update the app ?</string>

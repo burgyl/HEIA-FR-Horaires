@@ -1,12 +1,12 @@
-# Self Updating App
-An Android Application to allow students of the HEIA-FR easily access their schedule.
+# HEIA-FR Schedule
+An Android application to allow HEIA-FR students easy access to their schedule.
 
 Students can also check which rooms are available at a certain time.
 
 ## Requirements
 Android KitKat (4.4) and above.
 
-## Licenses & Credits
+## Licenses
 - [Apache HttpComponents](https://hc.apache.org/) by [The Apache Software Foundation](http://www.apache.org/), licensed under the Apache 2.0 license
 - [jsoup](https://jsoup.org/) by [Jonathan Hedley](https://jhy.io/), licensed under the MIT license
 - [Moshi](https://github.com/square/moshi) by [Square Open Source](https://square.github.io/), licensed under the Apache 2.0 license

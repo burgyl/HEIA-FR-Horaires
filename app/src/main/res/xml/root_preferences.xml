@@ -9,7 +9,7 @@
             app:dialogTitle="@string/theme_dialog_title"
             app:entries="@array/settings_theme_10_titles"
             app:entryValues="@array/settings_theme_10_values"
-            app:iconSpaceReserved="false"
+            app:icon="@drawable/ic_theme"
             app:isPreferenceVisible="false"
             app:key="@string/settings_key_theme_10"
             app:title="@string/theme_title"
@@ -20,7 +20,7 @@
             app:dialogTitle="@string/theme_dialog_title"
             app:entries="@array/settings_theme_9_titles"
             app:entryValues="@array/settings_theme_9_values"
-            app:iconSpaceReserved="false"
+            app:icon="@drawable/ic_theme"
             app:isPreferenceVisible="false"
             app:key="@string/settings_key_theme_9"
             app:title="@string/theme_title"
@@ -34,7 +34,7 @@
 
         <ListPreference
             app:dialogTitle="@string/classes_dialog_title"
-            app:iconSpaceReserved="false"
+            app:icon="@drawable/ic_school"
             app:key="@string/settings_key_class"
             app:title="@string/classes_title"
             app:useSimpleSummaryProvider="true" />
@@ -46,9 +46,63 @@
         app:title="@string/datas_header">
 
         <Preference
+            app:icon="@drawable/ic_delete"
             app:iconSpaceReserved="false"
             app:key="@string/settings_key_delete_datas"
             app:title="@string/delete_datas" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/about_header">
+
+        <Preference
+            app:icon="@drawable/ic_github"
+            app:key="@string/settings_key_see_github"
+            app:title="@string/see_github_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/licenses_header">
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/settings_key_license_httpcomponents"
+            app:summary="@string/license_httpcomponents_description"
+            app:title="@string/license_httpcomponents_title" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/settings_key_license_jsoup"
+            app:summary="@string/license_jsoup_description"
+            app:title="@string/license_jsoup_title" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/settings_key_license_moshi"
+            app:summary="@string/license_moshi_description"
+            app:title="@string/license_moshi_title" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/settings_key_license_okhttp"
+            app:summary="@string/license_okhttp_description"
+            app:title="@string/license_okhttp_title" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/settings_key_license_okio"
+            app:summary="@string/license_okio_description"
+            app:title="@string/license_okio_title" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/settings_key_license_selfupdatingapp"
+            app:summary="@string/license_selfupdatingapp_description"
+            app:title="@string/license_selfupdatingapp_title" />
 
     </PreferenceCategory>
 
