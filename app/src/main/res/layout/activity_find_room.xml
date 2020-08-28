@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/find_room_screen_horizontal_margin"
+    android:paddingTop="@dimen/find_room_screen_vertical_margin"
+    android:paddingEnd="@dimen/find_room_screen_horizontal_margin"
+    android:paddingBottom="@dimen/find_room_screen_vertical_margin"
+    tools:context=".activities.FindRoomActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/find_room_margin_elements"
+        android:paddingBottom="@dimen/find_room_margin_elements">
+
+        <Spinner
+            android:id="@+id/day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/find_room_margin_elements"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/time_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/find_room_margin_elements"
+            android:orientation="horizontal">
+
+            <include layout="@layout/time_layout_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/find_room_margin_elements"
+            android:src="@drawable/ic_arrow_forward" />
+
+        <LinearLayout
+            android:id="@+id/time_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/find_room_margin_elements"
+            android:orientation="horizontal">
+
+            <include layout="@layout/time_layout_content" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/search"
+            android:src="@drawable/ic_search" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rooms"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

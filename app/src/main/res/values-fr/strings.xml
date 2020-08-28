@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HEIA-FR Horaires</string>
+    <string name="slide_1_title">Connexion</string>
+    <string name="slide_1_username">Nom d\'utilisateur</string>
+    <string name="slide_1_password">Mot de passe</string>
+    <string name="slide_2_title">Classe</string>
+    <string name="slide_3_title">Vous pouvez y aller !</string>
+    <string name="slide_3_desc">Vous pouvez consulter vos horaires !</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="action_refresh_lessons">Actualiser les cours</string>
+    <string name="progress_refresh_lessons_title">Récupération des cours …</string>
+    <string name="day_0">Lundi</string>
+    <string name="day_1">Mardi</string>
+    <string name="day_2">Mercredi</string>
+    <string name="day_3">Jeudi</string>
+    <string name="day_4">Vendredi</string>
+    <string name="progress_login_title">Connexion …</string>
+    <string name="login_failed">Échec de la connexion</string>
+    <string name="http_error">Erreur HTTP</string>
+    <string name="unknown_host">Pas de connexion internet</string>
+    <string name="title_activity_settings">Paramètres</string>
+    <string name="display_header">Affichage</string>
+    <string name="infos_header">Informations</string>
+    <string name="datas_header">Données</string>
+    <string name="theme_title">Thème</string>
+    <string name="classes_dialog_title">Choisissez votre classe</string>
+    <string name="classes_title">Classe</string>
+    <string name="theme_dialog_title">Choisissez un thème</string>
+    <string name="classes_refreshed">La liste des classes a été actualisée</string>
+    <string name="search">Rechercher</string>
+    <string name="action_find_room">Trouver une salle</string>
+    <string name="error_end_time_before_start">L\'heure de fin doit être postérieure à l\'heure de début</string>
+    <string name="progress_search_rooms_title">Recherche de salles pour vous …</string>
+    <string name="delete_datas">Supprimer les données locales</string>
+    <string name="datas_deleted">Les données locales ont été supprimées</string>
+    <string name="warning_first_search">Etant donné que c\'est la première fois que vous voulez trouver une salle, l\'application doit obtenir tous les cours de toutes les salles à partir d\'Internet, ce qui peut prendre jusqu\'à 2 ou 3 minutes.</string>
+    <string name="dialog_update_title">Voulez-vous mettre à jour l\'application ?</string>
+    <string name="dialog_downloading_title">Téléchargement de la mise à jour …</string>
+</resources>

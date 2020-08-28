@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="settings_theme_10_titles">
+        <item>Predefinito</item>
+        <item>Chiaro</item>
+        <item>Scuro</item>
+    </string-array>
+
+    <string-array name="settings_theme_9_titles">
+        <item>Risparmio batteria</item>
+        <item>Chiaro</item>
+        <item>Scuro</item>
+    </string-array>
+</resources>

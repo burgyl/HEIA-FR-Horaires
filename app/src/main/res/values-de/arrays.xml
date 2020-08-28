@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="settings_theme_10_titles">
+        <item>Systemeinstellung</item>
+        <item>Hell</item>
+        <item>Dunkle</item>
+    </string-array>
+
+    <string-array name="settings_theme_9_titles">
+        <item>Batterieschoner</item>
+        <item>Hell</item>
+        <item>Dunkle</item>
+    </string-array>
+</resources>

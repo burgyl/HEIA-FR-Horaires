@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">HEIA-FR Schedule</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh_lessons">Refresh lessons</string>
+    <string name="action_find_room">Find a room</string>
+
+    <!-- Main screen -->
+    <string name="progress_refresh_lessons_title">Retrieving lessons …</string>
+
+    <!-- Bottom navigation -->
+    <string name="day_0">Monday</string>
+    <string name="day_1">Tuesday</string>
+    <string name="day_2">Wednesday</string>
+    <string name="day_3">Thursday</string>
+    <string name="day_4">Friday</string>
+
+    <!-- Welcome screen -->
+    <string name="progress_login_title">Login …</string>
+    <string name="login_failed">Login failed</string>
+    <string name="http_error">HTTP Error</string>
+    <string name="unknown_host">No internet connection</string>
+
+    <string name="slide_1_title">Login</string>
+    <string name="slide_1_username">Username</string>
+    <string name="slide_1_password">Password</string>
+
+    <string name="slide_2_title">Class</string>
+
+    <string name="slide_3_title">You\'re good to go !</string>
+    <string name="slide_3_desc">You can now see your schedule !</string>
+
+    <!-- Find a Room screen -->
+    <string name="search">Search</string>
+    <string name="time_separator" translatable="false">:</string>
+    <string name="progress_search_rooms_title">Searching rooms for you …</string>
+    <string name="error_end_time_before_start">The end time must be later than the start time</string>
+    <string name="warning_first_search">Since this is the first time you want to find a room, the application has to retrieve all lessons of all rooms from the Internet, which can take up to 2 or 3 minutes.</string>
+
+    <!-- Extra keys -->
+    <string name="key_extra_class_changed" translatable="false">class_changed</string>
+
+    <!-- Settings Titles -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="display_header">Display</string>
+    <string name="infos_header">Informations</string>
+    <string name="datas_header">Datas</string>
+
+    <!-- Settings keys -->
+    <string name="settings_key_theme_9" translatable="false">theme_9</string>
+    <string name="settings_key_theme_10" translatable="false">theme_10</string>
+    <string name="settings_key_class" translatable="false">class</string>
+    <string name="settings_key_delete_datas" translatable="false">delete_datas</string>
+
+    <!-- Display Settings -->
+    <string name="theme_title">Theme</string>
+    <string name="theme_dialog_title">Choose theme</string>
+
+    <!-- Informations Settings -->
+    <string name="classes_title">Class</string>
+    <string name="classes_dialog_title">Choose your class</string>
+
+    <!-- Datas Settings -->
+    <string name="delete_datas">Delete the local datas</string>
+    <string name="datas_deleted">The local datas have been deleted</string>
+    <string name="classes_refreshed">The class list has been refreshed</string>
+
+    <!-- selfupdate  -->
+    <string name="dialog_update_title">Do you want to update the app ?</string>
+    <string name="dialog_downloading_title">Downloading the update …</string>
+</resources>

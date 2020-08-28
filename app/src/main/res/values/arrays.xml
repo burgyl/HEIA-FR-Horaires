@@ -1,0 +1,25 @@
+<resources>
+    <string-array name="settings_theme_10_titles">
+        <item>System default</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="settings_theme_10_values">
+        <item>MODE_NIGHT_FOLLOW_SYSTEM</item>
+        <item>MODE_NIGHT_NO</item>
+        <item>MODE_NIGHT_YES</item>
+    </string-array>
+
+    <string-array name="settings_theme_9_titles">
+        <item>Set by Battery Saver</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="settings_theme_9_values">
+        <item>MODE_NIGHT_AUTO_BATTERY</item>
+        <item>MODE_NIGHT_NO</item>
+        <item>MODE_NIGHT_YES</item>
+    </string-array>
+</resources>

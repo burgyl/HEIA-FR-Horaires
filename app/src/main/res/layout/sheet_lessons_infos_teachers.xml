@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/bottom_sheet_between_big">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_sheet_between"
+        android:textColor="@color/bottomSheetTextColor"
+        android:textSize="@dimen/bottom_sheet_subtitle" />
+
+    <TextView
+        android:id="@+id/office"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_sheet_between"
+        android:drawableStart="@drawable/ic_business"
+        android:drawablePadding="@dimen/bottom_sheet_between"
+        android:textColor="@color/bottomSheetTextColor"
+        android:textSize="@dimen/bottom_sheet_sub_text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_sheet_between"
+        android:autoLink="phone"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="@dimen/bottom_sheet_between"
+        android:textColor="@color/bottomSheetTextColor"
+        android:textColorLink="@android:color/white"
+        android:textSize="@dimen/bottom_sheet_sub_text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="email"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="@dimen/bottom_sheet_between"
+        android:textColor="@color/bottomSheetTextColor"
+        android:textColorLink="@android:color/white"
+        android:textSize="@dimen/bottom_sheet_sub_text" />
+</LinearLayout>

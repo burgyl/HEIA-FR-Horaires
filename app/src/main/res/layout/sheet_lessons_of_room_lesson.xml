@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|start"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/bottom_sheet_lesson_detail_padding"
+    android:paddingBottom="@dimen/bottom_sheet_lesson_detail_padding">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"
+        android:textColor="@color/bottomSheetTextColor"
+        android:textSize="@dimen/bottom_sheet_sub_text"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start|fill_vertical"
+        android:textColor="@color/bottomSheetTextColor"
+        android:textSize="@dimen/bottom_sheet_sub_text" />
+
+    <TextView
+        android:id="@+id/classes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start|fill_vertical"
+        android:textColor="@color/bottomSheetTextColor"
+        android:textSize="@dimen/bottom_sheet_sub_text" />
+</LinearLayout>

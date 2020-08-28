@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HEIA-FR Orari</string>
+    <string name="slide_1_title">Login</string>
+    <string name="slide_1_username">Nome utente</string>
+    <string name="slide_1_password">Password</string>
+    <string name="slide_2_title">Classe</string>
+    <string name="slide_3_title">È pronto ad iniziare !</string>
+    <string name="slide_3_desc">Ora lei può consultare i suoi orari !</string>
+    <string name="progress_login_title">Login …</string>
+    <string name="display_header">Display</string>
+    <string name="classes_title">Classe</string>
+    <string name="progress_refresh_lessons_title">Recuperare le lezioni …</string>
+    <string name="action_refresh_lessons">Aggiornare le lezioni</string>
+    <string name="unknown_host">Nessuna connessione internet</string>
+    <string name="login_failed">Login non riuscito</string>
+    <string name="classes_refreshed">L\'elenco delle classi è stato aggiornato</string>
+    <string name="title_activity_settings">Impostazioni</string>
+    <string name="http_error">Errore HTTP</string>
+    <string name="infos_header">Informazioni</string>
+    <string name="datas_header">Dati</string>
+    <string name="theme_title">Tema</string>
+    <string name="classes_dialog_title">Scelga la vostra classe</string>
+    <string name="theme_dialog_title">Scelga tema</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="day_0">Lunedì</string>
+    <string name="day_1">Martedì</string>
+    <string name="day_4">Venerdì</string>
+    <string name="day_3">Giovedì</string>
+    <string name="day_2">Mercoledì</string>
+    <string name="search">Cercare</string>
+    <string name="action_find_room">Trovare una stanza</string>
+    <string name="error_end_time_before_start">L\'ora della fine deve essere successiva all\'ora del inizio</string>
+    <string name="progress_search_rooms_title">Ricerca stanze per lei …</string>
+    <string name="delete_datas">Cancellare i dati locali</string>
+    <string name="datas_deleted">I dati locali sono stati cancellati</string>
+    <string name="warning_first_search">Poiché è la prima volta che si desidera trovare una stanza, l\'applicazione deve recuperare tutte le lezioni di tutte le stanze da Internet, che può richiedere fino a 2 o 3 minuti.</string>
+    <string name="dialog_update_title">Vuole aggiornare l\'applicazione ?</string>
+    <string name="dialog_downloading_title">Il download del aggiornamento …</string>
+</resources>

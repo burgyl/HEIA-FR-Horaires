@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_day_0"
+        android:icon="@drawable/ic_looks_1"
+        android:title="@string/day_0" />
+
+    <item
+        android:id="@+id/navigation_day_1"
+        android:icon="@drawable/ic_looks_2"
+        android:title="@string/day_1" />
+
+    <item
+        android:id="@+id/navigation_day_2"
+        android:icon="@drawable/ic_looks_3"
+        android:title="@string/day_2" />
+
+    <item
+        android:id="@+id/navigation_day_3"
+        android:icon="@drawable/ic_looks_4"
+        android:title="@string/day_3" />
+
+    <item
+        android:id="@+id/navigation_day_4"
+        android:icon="@drawable/ic_looks_5"
+        android:title="@string/day_4" />
+
+</menu>
