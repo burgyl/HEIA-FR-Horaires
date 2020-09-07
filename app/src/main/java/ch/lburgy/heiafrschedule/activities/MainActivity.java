@@ -374,6 +374,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 Teacher teacher = teacherDao.getTeacher(teacherAbbr);
                 if (teacher == null) {
                     teacher = httpBasicClient.getTeacherInfos(teacherAbbr);
+                    if (teacher.getName().equals(""))
+                        continue;
                     teacherDao.insertTeacher(teacher);
                 }
                 teachers.add(teacher);

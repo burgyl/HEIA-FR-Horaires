@@ -61,12 +61,12 @@ public class BottomSheetDialogLessonsInfos extends com.google.android.material.b
             txtNameTeacher.setText(teacher.getName());
             txtEmailTeacher.setText(teacher.getEmail());
             String phone = teacher.getPhone();
-            if (phone != null) {
+            if (phone != null && !phone.equals("")) {
                 txtPhoneTeacher.setText(phone);
                 txtPhoneTeacher.setVisibility(View.VISIBLE);
             }
             String office = teacher.getOffice();
-            if (office != null) {
+            if (office != null && !office.equals("")) {
                 txtOfficeTeacher.setText(office);
                 txtOfficeTeacher.setVisibility(View.VISIBLE);
             }
