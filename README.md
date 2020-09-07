@@ -3,6 +3,9 @@ An Android application to allow HEIA-FR students easy access to their schedule.
 
 Students can also check which rooms are available at a certain time.
 
+## Download
+You can download the APK (installation file) on the [latest release page](https://github.com/burgyl/HEIA-FR-Schedule/releases/latest)
+
 ## Requirements
 Android KitKat (4.4) and above.
 
