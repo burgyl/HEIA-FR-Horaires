@@ -25,8 +25,12 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.io.InterruptedIOException;
 import java.net.UnknownHostException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -85,11 +89,46 @@ public class HttpBasicClient {
         }
     }
 
-    public List<ClassHEIAFR> getClasses() throws HttpException, UnknownHostException, NoInternetConnectionException, InterruptedIOException {
-        ArrayList<ClassHEIAFR> classes = new ArrayList<>();
+    public Date[] getScheduleDates() throws HttpException, UnknownHostException, NoInternetConnectionException, InterruptedIOException {
         Document doc = getDoc(URL_CLASSES, true);
         if (doc == null) return null;
 
+        Date[] dates = new Date[2];
+        Element table = doc.getElementsByTag("table").get(4);
+        Element script = table.getElementsByTag("script").get(0);
+        String scriptContent = script.childNode(0).toString();
+
+        // Get the HTML from within the script tag
+        Pattern pattern = Pattern.compile("<.*>");
+        Matcher matcher = pattern.matcher(scriptContent);
+        matcher.find();
+        String datesString = Jsoup.parse(matcher.group(0)).text();
+
+        // Get the dates
+        pattern = Pattern.compile(".*?du (.*?) au (.*)");
+        matcher = pattern.matcher(datesString);
+        matcher.find();
+        String firstDate = matcher.group(1);
+        String secondDate = matcher.group(2);
+
+        // Parse them
+        SimpleDateFormat parser = new SimpleDateFormat("dd MMM yyyy", Locale.FRENCH);
+        try {
+            dates[0] = parser.parse(firstDate);
+            dates[1] = parser.parse(secondDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        return dates;
+    }
+
+    public List<ClassHEIAFR> getClasses() throws HttpException, UnknownHostException, NoInternetConnectionException, InterruptedIOException {
+        Document doc = getDoc(URL_CLASSES, true);
+        if (doc == null) return null;
+
+        ArrayList<ClassHEIAFR> classes = new ArrayList<>();
         Element select = doc.getElementsByTag("select").first();
         Elements options = select.getElementsByTag("option");
         for (Element option : options) {

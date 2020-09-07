@@ -18,7 +18,7 @@
     <string name="title_activity_settings">Impostazioni</string>
     <string name="http_error">Errore HTTP</string>
     <string name="infos_header">Informazioni</string>
-    <string name="datas_header">Dati</string>
+    <string name="data_header">Dati</string>
     <string name="theme_title">Tema</string>
     <string name="classes_dialog_title">Scelga la vostra classe</string>
     <string name="theme_dialog_title">Scelga tema</string>
@@ -32,8 +32,8 @@
     <string name="action_find_room">Trovare una stanza</string>
     <string name="error_end_time_before_start">L\'ora della fine deve essere successiva all\'ora del inizio</string>
     <string name="progress_search_rooms_title">Ricerca stanze per lei …</string>
-    <string name="delete_datas">Cancellare i dati locali</string>
-    <string name="datas_deleted">I dati locali sono stati cancellati</string>
+    <string name="delete_data">Cancellare i dati locali</string>
+    <string name="data_deleted">I dati locali sono stati cancellati</string>
     <string name="warning_first_search">Poiché è la prima volta che si desidera trovare una stanza, l\'applicazione deve recuperare tutte le lezioni di tutte le stanze da Internet, che può richiedere fino a 2 o 3 minuti.</string>
     <string name="dialog_update_title">Vuole aggiornare l\'applicazione ?</string>
     <string name="dialog_downloading_title">Il download del aggiornamento …</string>
@@ -46,4 +46,6 @@
     <string name="about_header">About</string>
     <string name="licenses_header">Licenze</string>
     <string name="see_github_title">Vedi il progetto su GitHub</string>
+    <string name="data_schedule_dates">Orari dal %1$s al %2$s</string>
+    <string name="new_schedules">Sono disponibili nuovi orari !</string>
 </resources>

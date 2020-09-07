@@ -22,7 +22,7 @@
     <string name="title_activity_settings">Paramètres</string>
     <string name="display_header">Affichage</string>
     <string name="infos_header">Informations</string>
-    <string name="datas_header">Données</string>
+    <string name="data_header">Données</string>
     <string name="theme_title">Thème</string>
     <string name="classes_dialog_title">Choisissez votre classe</string>
     <string name="classes_title">Classe</string>
@@ -32,8 +32,8 @@
     <string name="action_find_room">Trouver une salle</string>
     <string name="error_end_time_before_start">L\'heure de fin doit être postérieure à l\'heure de début</string>
     <string name="progress_search_rooms_title">Recherche de salles pour vous …</string>
-    <string name="delete_datas">Supprimer les données locales</string>
-    <string name="datas_deleted">Les données locales ont été supprimées</string>
+    <string name="delete_data">Supprimer les données locales</string>
+    <string name="data_deleted">Les données locales ont été supprimées</string>
     <string name="warning_first_search">Etant donné que c\'est la première fois que vous voulez trouver une salle, l\'application doit obtenir tous les cours de toutes les salles à partir d\'Internet, ce qui peut prendre jusqu\'à 2 ou 3 minutes.</string>
     <string name="dialog_update_title">Voulez-vous mettre à jour l\'application ?</string>
     <string name="dialog_downloading_title">Téléchargement de la mise à jour …</string>
@@ -46,4 +46,6 @@
     <string name="license_moshi_description">par Square Open Source, sous license Apache 2.0</string>
     <string name="license_jsoup_description">par Jonathan Hedley, sous license MIT</string>
     <string name="license_httpcomponents_description">par The Apache Software Foundation, sous license Apache 2.0</string>
+    <string name="data_schedule_dates">Horaires du %1$s au %2$s</string>
+    <string name="new_schedules">De nouveaux horaires sont disponibles !</string>
 </resources>

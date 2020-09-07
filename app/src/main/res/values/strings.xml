@@ -6,6 +6,7 @@
 
     <!-- Main screen -->
     <string name="progress_refresh_lessons_title">Retrieving lessons …</string>
+    <string name="new_schedules">New schedules are available !</string>
 
     <!-- Bottom navigation -->
     <string name="day_0">Monday</string>
@@ -43,7 +44,7 @@
     <string name="title_activity_settings">Settings</string>
     <string name="display_header">Display</string>
     <string name="infos_header">Informations</string>
-    <string name="datas_header">Datas</string>
+    <string name="data_header">Data</string>
     <string name="about_header">About</string>
     <string name="licenses_header">Licenses</string>
 
@@ -51,7 +52,8 @@
     <string name="settings_key_theme_9" translatable="false">theme_9</string>
     <string name="settings_key_theme_10" translatable="false">theme_10</string>
     <string name="settings_key_class" translatable="false">class</string>
-    <string name="settings_key_delete_datas" translatable="false">delete_datas</string>
+    <string name="settings_key_delete_data" translatable="false">delete_data</string>
+    <string name="settings_key_data_schedule_dates" translatable="false">data_schedule_date</string>
     <string name="settings_key_see_github" translatable="false">github</string>
     <string name="settings_key_license_httpcomponents" translatable="false">license_httpcomponents</string>
     <string name="settings_key_license_jsoup" translatable="false">license_jsoup</string>
@@ -68,10 +70,11 @@
     <string name="classes_title">Class</string>
     <string name="classes_dialog_title">Choose your class</string>
 
-    <!-- Datas Settings -->
-    <string name="delete_datas">Delete the local datas</string>
-    <string name="datas_deleted">The local datas have been deleted</string>
+    <!-- Data Settings -->
+    <string name="delete_data">Delete the local data</string>
+    <string name="data_deleted">The local data have been deleted</string>
     <string name="classes_refreshed">The class list has been refreshed</string>
+    <string name="data_schedule_dates">Schedule from %1$s to %2$s</string>
 
     <!-- About Settings -->
     <string name="see_github_title">See the project on GitHub</string>

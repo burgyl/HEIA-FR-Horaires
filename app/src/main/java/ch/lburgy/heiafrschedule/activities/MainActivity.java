@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }).start();
 
         if (savedInstanceState == null) {
-            getLessonsAndShowThem(false);
+            getLessonsAndShowThem(false, true);
         } else {
             lessonsCompletesByDay = (HashMap<Integer, ArrayList<LessonOfClassComplete>>)
                     savedInstanceState.getSerializable(KEY_SAVED_LESSONS);
@@ -146,10 +146,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 threadType = (ThreadType) savedInstanceState.getSerializable(KEY_SAVED_THREAD_TYPE);
                 switch (threadType) {
                     case getLessons:
-                        getLessonsAndShowThem(false);
+                        getLessonsAndShowThem(false, false);
                         break;
                     case getLessonsFromInternet:
-                        getLessonsAndShowThem(true);
+                        getLessonsAndShowThem(true, false);
                         break;
                 }
             } else {
@@ -158,17 +158,57 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
     }
 
-    private void getLessonsAndShowThem(final boolean forceFromInternet) {
+    private boolean isNewer(boolean showToast) throws HttpBasicClient.HttpException, InterruptedIOException, HttpBasicClient.NoInternetConnectionException, UnknownHostException {
+        if (!httpBasicClient.isConnectedToInternet()) return false;
+        Date[] dates = httpBasicClient.getScheduleDates();
+
+        if (dates != null && dates.length == 2 && dates[0] != null && dates[1] != null) {
+            Date[] scheduleDates = prefManager.getScheduleDates();
+            if (scheduleDates[1] == null || scheduleDates[1].compareTo(dates[0]) < 0) {
+                // Delete data
+                lessonDao.deleteLessons();
+                roomHEIAFRDao.deleteRooms();
+                teacherDao.deleteTeachers();
+                prefManager.setLastUpdateRoomsLessons(null);
+                // Set the new schedule dates
+                prefManager.setScheduleDates(dates);
+                if (showToast) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(MainActivity.this, R.string.new_schedules, Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void getLessonsAndShowThem(final boolean forceFromInternet, final boolean firstLaunch) {
         if (MainActivity.this.isDestroyed()) return;
         String progressTitle = getResources().getString(R.string.progress_refresh_lessons_title);
         progressDialog = ProgressDialog.show(this, progressTitle, null, true);
         threadType = ThreadType.getLessons;
+        if (currentThread != null && currentThread.isAlive())
+            currentThread.interrupt();
         currentThread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
+                    boolean thisForceFromInternet = forceFromInternet;
                     int httpCode = CODE_NO_PROBLEMS;
-                    if (!forceFromInternet) {
+                    try {
+                        if (firstLaunch && isNewer(true))
+                            thisForceFromInternet = true;
+                    } catch (HttpBasicClient.HttpException e) {
+                        httpCode = e.getCode();
+                    } catch (UnknownHostException | HttpBasicClient.NoInternetConnectionException e) {
+                        httpCode = CODE_NO_CONNECTION;
+                    }
+
+                    if (!thisForceFromInternet) {
                         lessonsCompletesByDay = new HashMap<>();
                         for (int i = 0; i < NB_DAYS; i++)
                             lessonsCompletesByDay.put(i, new ArrayList<LessonOfClassComplete>());
@@ -284,6 +324,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         String progressTitle = getResources().getString(R.string.progress_refresh_lessons_title);
         progressDialog = ProgressDialog.show(this, progressTitle, null, true);
         threadType = ThreadType.getLessonsFromInternet;
+        if (currentThread != null && currentThread.isAlive())
+            currentThread.interrupt();
         currentThread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -327,6 +369,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         if (deleteExisting) {
             lessonClassJoinDao.deleteLessonsFromClass(classHEIAFR.getName());
             lessonClassJoinDao.deleteLessonsNoClass();
+        } else {
+            isNewer(false);
         }
 
         if (roomHEIAFRDao.getNbRoom() == 0) {
@@ -351,7 +395,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             try {
                 lessonClassJoinDao.insertLessonClassJoin(new LessonClassJoin(lesson.getId(), classHEIAFR.getName()));
             } catch (SQLiteConstraintException e) {
-                // do nothing, the association is allready in the DB
+                // do nothing, the association is already in the DB
             }
 
             ArrayList<RoomHEIAFR> rooms = new ArrayList<>();
@@ -365,7 +409,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 try {
                     lessonRoomJoinDao.insertLessonRoomJoin(new LessonRoomJoin(lesson.getId(), roomID));
                 } catch (SQLiteConstraintException e) {
-                    // do nothing, the association is allready in the DB
+                    // do nothing, the association is already in the DB
                 }
             }
 
@@ -390,6 +434,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
         classHEIAFR.setLastUpdate(new Date());
         classHEIAFRDao.updateClassHEIAFR(classHEIAFR);
+        prefManager.setScheduleDates(httpBasicClient.getScheduleDates());
     }
 
     private void showHttpErrorCode(int httpCode) {
@@ -460,7 +505,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                         });
                     }
                 }).start();
-                getLessonsAndShowThem(false);
+                getLessonsAndShowThem(false, false);
             }
         }
         if (prefManager.isLaunchWelcome()) {

@@ -23,6 +23,8 @@ public class PrefManager {
     private static final String KEY_CLASS_ID = "class_id";
     private static final String KEY_THEME = "theme";
     private static final String KEY_LAST_UPDATE_ROOMS_LESSONS = "last_update_rooms_lessons";
+    private static final String KEY_SCHEDULE_DATE_1 = "schedule_date_1";
+    private static final String KEY_SCHEDULE_DATE_2 = "schedule_date_2";
 
     private static final String KEY_IV = "-iv";
     private static final String KEY_ENCRYPTED = "encrypted_key";
@@ -110,6 +112,21 @@ public class PrefManager {
 
     public Date getLastUpdateRoomsLessons() {
         return DateConverter.toDate(pref.getLong(KEY_LAST_UPDATE_ROOMS_LESSONS, -1));
+    }
+
+    public void setScheduleDates(Date[] scheduleDates) {
+        if (scheduleDates != null && scheduleDates.length == 2) {
+            editor.putLong(KEY_SCHEDULE_DATE_1, DateConverter.fromDate(scheduleDates[0]));
+            editor.putLong(KEY_SCHEDULE_DATE_2, DateConverter.fromDate(scheduleDates[1]));
+            editor.commit();
+        }
+    }
+
+    public Date[] getScheduleDates() {
+        Date[] scheduleDates = new Date[2];
+        scheduleDates[0] = DateConverter.toDate(pref.getLong(KEY_SCHEDULE_DATE_1, -1));
+        scheduleDates[1] = DateConverter.toDate(pref.getLong(KEY_SCHEDULE_DATE_2, -1));
+        return scheduleDates;
     }
 
     public void setTheme(int theme) {

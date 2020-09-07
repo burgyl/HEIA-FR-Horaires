@@ -21,7 +21,7 @@
     <string name="classes_refreshed">Die Liste der Klassen wurde aktualisiert</string>
     <string name="infos_header">Informationen</string>
     <string name="display_header">Display</string>
-    <string name="datas_header">Daten</string>
+    <string name="data_header">Daten</string>
     <string name="theme_title">Design</string>
     <string name="classes_dialog_title">Wählen Sie Ihre Klasse</string>
     <string name="theme_dialog_title">Design auswählen</string>
@@ -32,8 +32,8 @@
     <string name="action_find_room">Einen Raum finden</string>
     <string name="error_end_time_before_start">Die Endzeit muss später als die Startzeit liegen</string>
     <string name="progress_search_rooms_title">Räume für Sie suchen …</string>
-    <string name="delete_datas">Lokale Daten löschen</string>
-    <string name="datas_deleted">Lokale Daten wurden gelöscht</string>
+    <string name="delete_data">Lokale Daten löschen</string>
+    <string name="data_deleted">Lokale Daten wurden gelöscht</string>
     <string name="warning_first_search">Da dies das erste Mal ist, dass Sie einen Raum finden wollen, muss die Anwendung alle Unterrichte aller Räume aus dem Internet abrufen, was bis zu 2 oder 3 Minuten dauern kann.</string>
     <string name="dialog_downloading_title">Das Update herunterladen …</string>
     <string name="dialog_update_title">Möchten Sie die Anwendung aktualisieren ?</string>
@@ -46,4 +46,6 @@
     <string name="about_header">Über</string>
     <string name="licenses_header">Lizenzen</string>
     <string name="see_github_title">Siehe das Projekt auf GitHub</string>
+    <string name="data_schedule_dates">Zeitplan vom %1$s bis %2$s</string>
+    <string name="new_schedules">Neue Zeitpläne sind verfügbar !</string>
 </resources>

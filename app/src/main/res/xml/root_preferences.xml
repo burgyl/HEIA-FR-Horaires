@@ -43,13 +43,18 @@
 
     <PreferenceCategory
         app:iconSpaceReserved="false"
-        app:title="@string/datas_header">
+        app:title="@string/data_header">
 
         <Preference
             app:icon="@drawable/ic_delete"
             app:iconSpaceReserved="false"
-            app:key="@string/settings_key_delete_datas"
-            app:title="@string/delete_datas" />
+            app:key="@string/settings_key_delete_data"
+            app:title="@string/delete_data" />
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:isPreferenceVisible="false"
+            app:key="@string/settings_key_data_schedule_dates" />
 
     </PreferenceCategory>
 

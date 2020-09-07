@@ -19,7 +19,10 @@ import androidx.preference.PreferenceFragmentCompat;
 
 import java.io.InterruptedIOException;
 import java.net.UnknownHostException;
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import ch.lburgy.heiafrschedule.R;
 import ch.lburgy.heiafrschedule.database.ClassHEIAFR;
@@ -162,11 +165,18 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                 findPreference(keyTheme9).setVisible(true);
             }
 
-            Preference btnDeleteDatas = findPreference(getString(R.string.settings_key_delete_datas));
-            btnDeleteDatas.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            Date[] dates = prefManager.getScheduleDates();
+            if (dates != null && dates.length == 2 && dates[0] != null && dates[1] != null) {
+                DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT, Locale.getDefault());
+                Preference preference = findPreference(getString(R.string.settings_key_data_schedule_dates));
+                preference.setTitle(getResources().getString(R.string.data_schedule_dates, df.format(dates[0]), df.format(dates[1])));
+                preference.setVisible(true);
+            }
+
+            findPreference(getString(R.string.settings_key_delete_data)).setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    deleteDatas();
+                    deleteData();
                     return true;
                 }
             });
@@ -243,7 +253,7 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
             }).start();
         }
 
-        private void deleteDatas() {
+        private void deleteData() {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -251,10 +261,12 @@ public class SettingsActivity extends AppCompatActivity implements SharedPrefere
                     roomHEIAFRDao.deleteRooms();
                     teacherDao.deleteTeachers();
                     prefManager.setLastUpdateRoomsLessons(null);
+                    prefManager.setScheduleDates(new Date[2]);
                     classChanged = true;
                     getActivity().runOnUiThread(new Runnable() {
                         public void run() {
-                            String message = getResources().getString(R.string.datas_deleted);
+                            findPreference(getString(R.string.settings_key_data_schedule_dates)).setVisible(false);
+                            String message = getResources().getString(R.string.data_deleted);
                             Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
                         }
                     });
