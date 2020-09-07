@@ -76,7 +76,7 @@ public class WelcomeActivity extends AppCompatActivity {
             launchHomeScreen();
 
         if (savedInstanceState == null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-            SelfUpdate.checkUpdate(this, "https://api.github.com/repos/burgyl/HEIA-FR-Schedule/releases/latest");
+            SelfUpdate.checkUpdate(this, "burgyl", "HEIA-FR-Schedule");
 
         httpBasicClient = new HttpBasicClient(this);
         myDatabase = MyDatabase.getInstance(this);
