@@ -48,4 +48,6 @@
     <string name="see_github_title">Siehe das Projekt auf GitHub</string>
     <string name="data_schedule_dates">Zeitplan vom %1$s bis %2$s</string>
     <string name="new_schedules">Neue Zeitpläne sind verfügbar !</string>
+    <string name="developer_description">Lizenziert unter der GNU GPL v3.0-Lizenz</string>
+    <string name="developer_title">Entwickelt von Lucas Bürgy</string>
 </resources>

@@ -48,4 +48,6 @@
     <string name="see_github_title">Vedi il progetto su GitHub</string>
     <string name="data_schedule_dates">Orari dal %1$s al %2$s</string>
     <string name="new_schedules">Sono disponibili nuovi orari !</string>
+    <string name="developer_description">Con licenza GNU GPL v3.0</string>
+    <string name="developer_title">Sviluppato da Lucas Bürgy</string>
 </resources>

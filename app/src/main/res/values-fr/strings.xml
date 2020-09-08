@@ -48,4 +48,6 @@
     <string name="license_httpcomponents_description">par The Apache Software Foundation, sous license Apache 2.0</string>
     <string name="data_schedule_dates">Horaires du %1$s au %2$s</string>
     <string name="new_schedules">De nouveaux horaires sont disponibles !</string>
+    <string name="developer_title">Développée par Lucas Bürgy</string>
+    <string name="developer_description">Sous license GNU GPL v3.0</string>
 </resources>

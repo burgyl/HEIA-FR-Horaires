@@ -55,6 +55,7 @@
     <string name="settings_key_delete_data" translatable="false">delete_data</string>
     <string name="settings_key_data_schedule_dates" translatable="false">data_schedule_date</string>
     <string name="settings_key_see_github" translatable="false">github</string>
+    <string name="settings_key_developer" translatable="false">developer</string>
     <string name="settings_key_license_httpcomponents" translatable="false">license_httpcomponents</string>
     <string name="settings_key_license_jsoup" translatable="false">license_jsoup</string>
     <string name="settings_key_license_moshi" translatable="false">license_moshi</string>
@@ -78,6 +79,8 @@
 
     <!-- About Settings -->
     <string name="see_github_title">See the project on GitHub</string>
+    <string name="developer_title">Developed by Lucas Bürgy</string>
+    <string name="developer_description">Licensed under the GNU GPL v3.0 license</string>
 
     <!-- Licenses Settings -->
     <string name="license_httpcomponents_title" translatable="false">Apache HttpComponents</string>

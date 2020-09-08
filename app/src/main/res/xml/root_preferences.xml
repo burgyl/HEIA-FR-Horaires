@@ -47,12 +47,11 @@
 
         <Preference
             app:icon="@drawable/ic_delete"
-            app:iconSpaceReserved="false"
             app:key="@string/settings_key_delete_data"
             app:title="@string/delete_data" />
 
         <Preference
-            app:iconSpaceReserved="false"
+            app:icon="@drawable/ic_calendar"
             app:isPreferenceVisible="false"
             app:key="@string/settings_key_data_schedule_dates" />
 
@@ -66,6 +65,12 @@
             app:icon="@drawable/ic_github"
             app:key="@string/settings_key_see_github"
             app:title="@string/see_github_title" />
+
+        <Preference
+            app:icon="@drawable/ic_info"
+            app:key="@string/settings_key_developer"
+            app:summary="@string/developer_description"
+            app:title="@string/developer_title" />
 
     </PreferenceCategory>
 
